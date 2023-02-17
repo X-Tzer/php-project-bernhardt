@@ -1,0 +1,12 @@
+article{
+    position: relative;
+}
+.room-list-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.room-list-wrapper .card{
+    margin: 3em;
+    margin-bottom: 7em;
+}
