@@ -31,7 +31,7 @@
   $r = admin_check($con);
 
   if (empty($u)) {
-    header("Location:form.php");
+    header("Location:login.php");
   }
   ?>
   <header>
@@ -44,6 +44,9 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px">
+            <li class="nav-item">
+                <a class="nav-link" href="home.php">Home</a>
+              </li>
             <li class="nav-item">
                 <a class="nav-link" href="welcome.php">Welcome</a>
               </li>

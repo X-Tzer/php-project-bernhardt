@@ -14,8 +14,7 @@
         }
 
         section img {
-            margin: 5px;
-            padding: 10px;
+            padding: 8px;
         }
     </style>
 </head>
@@ -24,6 +23,7 @@
     <?php
     $dir = opendir("images");
     ?>
+    <a href="home.php">Home</a>
     <section>
         <?php
         while (($file = readdir($dir)) !== false) {
@@ -31,7 +31,7 @@
                 continue;
             }
         ?>
-            <img src="images/<?php echo $file ?>" height="300x" width="300px" /> 
+            <img src="images/<?php echo $file ?>" height="300x" width="425px" /> 
         <?php
         }
         ?>

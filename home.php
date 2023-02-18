@@ -1,3 +1,6 @@
+<?php
+require_once "classesandfunctions.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,6 +61,30 @@
                 </div>
               </li>
             </ul>
+            <?php
+            if (session_status() === PHP_SESSION_NONE) {
+              $s = new Session();
+              $s->ses_start();
+              // print_r($_SESSION);die;
+              if ($_SESSION != []) {
+                $u = $_SESSION['username'];
+            ?>
+                <div class="log-controls">
+                  <form class="me-auto" method="post" action="profile.php">
+                    <button type="submit" name="logout" class="btn btn-light">
+                      <?php echo $u ?>
+                    </button>
+                  </form>
+                  <form class="me-auto" method="post" action="logout.php">
+                    <button type="submit" name="logout" class="btn btn-light">
+                      Logout
+                    </button>
+                  </form>
+                </div>
+            <?php
+              }
+            }
+            ?>
             <!-- <form class="me-auto" method="post" action="../php/logout.php">
                <input
                 type="search"
@@ -79,6 +106,7 @@
       </nav>
     </div>
   </header>
+
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" style="height:600px;">
       <div class="carousel-item active">
@@ -106,12 +134,12 @@
     </div>
     <div>
       <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolore illum qui iusto iste similique est quibusdam, temporibus et libero blanditiis, id dignissimos unde alias quae dolorem illo commodi perferendis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolore illum qui iusto iste similique est quibusdam, temporibus et libero blanditiis, id dignissimos unde alias quae dolorem illo commodi perferendis.
       </p>
     </div>
     <div>
       <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolore illum qui iusto iste similique est quibusdam, temporibus et libero blanditiis, id dignissimos unde alias quae dolorem illo commodi perferendis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolore illum qui iusto iste similique est quibusdam, temporibus et libero blanditiis, id dignissimos unde alias quae dolorem illo commodi perferendis.
       </p>
     </div>
   </div>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 include "header.php";
 ?>
 <style>
@@ -7,9 +7,15 @@ include "header.php";
         justify-content: row;
         flex-wrap: wrap;
     }
+
     section img {
         margin: 5px;
         padding: 10px;
+    }
+    .photos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 </style>
 <?php
@@ -25,14 +31,17 @@ $dir = opendir("images");
             if ($file == '.' || $file == '..') {
                 continue;
             }
-    ?>
-            <img src="../images/<?php echo $file ?>" height="300x" width="300px" />
-            <?php
-            if ($rou["role"] == 1) {
-            ?>
-                <a href="filedelete.php?filename=<?php echo $file; ?>">Delete</a>
+    ?><div class="photos">
+                <img src="images/<?php echo $file ?>" height="300x" width="425px" />
+                <?php
+                if ($rou["role"] == 1) {
+                ?>
+                    <a href="filedelete.php?filename=<?php echo $file; ?>">Delete</a>
+                <?php
+                }
+                ?>
+            </div>
     <?php
-            }
         }
     }
     ?>
