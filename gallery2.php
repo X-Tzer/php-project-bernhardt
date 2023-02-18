@@ -22,7 +22,7 @@
 
 <body>
     <?php
-    $dir = opendir("../images");
+    $dir = opendir("images");
     ?>
     <section>
         <?php
@@ -31,7 +31,7 @@
                 continue;
             }
         ?>
-            <img src="../images/<?php echo $file ?>" height="300x" width="300px" /> 
+            <img src="images/<?php echo $file ?>" height="300x" width="300px" /> 
         <?php
         }
         ?>

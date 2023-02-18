@@ -1,7 +1,7 @@
 <?php
 $filename = $_GET['filename'];
-if(file_exists("../images/".$filename)){
-    unlink("../images/".$filename);
+if(file_exists("images/".$filename)){
+    unlink("images/".$filename);
     // echo time();
     header("Location:gallery.php");
 }

@@ -6,9 +6,7 @@ include "header.php";
         display: flex;
         justify-content: row;
         flex-wrap: wrap;
-
     }
-
     section img {
         margin: 5px;
         padding: 10px;
@@ -18,7 +16,7 @@ include "header.php";
 $db = new db_connect();
 $con = $db->connectdb();
 $r = admin_check($con);
-$dir = opendir("../images");
+$dir = opendir("images");
 ?>
 <section>
     <?php

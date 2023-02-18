@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 18, 2023 at 05:07 AM
+-- Generation Time: Feb 18, 2023 at 11:34 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -74,6 +74,18 @@ INSERT INTO `logindetails` (`id`, `firstname`, `lastname`, `phone`, `password`, 
 (1, 'Dipu', 'Dangol', '9863339739', '98ede4ea7c4595de0298e92fd3a5114f', 'ddangol123@hotmail.com', 'dangoldipu', 1),
 (2, 'Anuraj', 'Giri', '9841174455', '97df097c87b32858ec671df4f35a7b31', 'g.anurajgiree07@gmail.com', 'giriAnuraj', 0);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `roomorder`
+--
+
+CREATE TABLE `roomorder` (
+  `id` int(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `roomtype` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- Indexes for dumped tables
 --
@@ -91,6 +103,12 @@ ALTER TABLE `logindetails`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `roomorder`
+--
+ALTER TABLE `roomorder`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -105,6 +123,12 @@ ALTER TABLE `hotelrooms`
 --
 ALTER TABLE `logindetails`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `roomorder`
+--
+ALTER TABLE `roomorder`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
